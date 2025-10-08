@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evaluasi Komprehensif Aplikasi Shopee</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
-
         * {
             margin: 0;
             padding: 0;
@@ -14,76 +12,15 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background: #0a0e27;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             overflow-x: hidden;
-            color: #fff;
-        }
-
-        /* Animated Background */
-        .bg-animation {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            background: linear-gradient(45deg, #0a0e27, #1a1d3f, #2d1b4e);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
-        }
-
-        .bg-animation::before {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(238,77,45,0.1) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: moveGrid 20s linear infinite;
-        }
-
-        @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        @keyframes moveGrid {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
-        }
-
-        /* Floating particles */
-        .particle {
-            position: fixed;
-            width: 4px;
-            height: 4px;
-            background: rgba(238,77,45,0.6);
-            border-radius: 50%;
-            pointer-events: none;
-            animation: float 20s infinite;
-            z-index: 1;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0) translateX(0) scale(1);
-                opacity: 0;
-            }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% {
-                transform: translateY(-100vh) translateX(100px) scale(0);
-                opacity: 0;
-            }
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            position: relative;
-            z-index: 2;
         }
 
         .slide {
@@ -93,515 +30,347 @@
             justify-content: center;
             align-items: center;
             padding: 40px 20px;
-            opacity: 0;
-            transform: translateY(50px);
-            animation: slideIn 0.8s forwards;
         }
 
-        @keyframes slideIn {
+        .slide-content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            width: 100%;
+            max-width: 1000px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
-        .slide-content {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border-radius: 30px;
-            padding: 50px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.5),
-                        inset 0 1px 0 rgba(255,255,255,0.1);
-            width: 100%;
-            max-width: 1100px;
-            border: 1px solid rgba(255,255,255,0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .slide-content::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: conic-gradient(from 0deg, transparent, rgba(238,77,45,0.1), transparent 30%);
-            animation: rotate 8s linear infinite;
-            pointer-events: none;
-        }
-
-        @keyframes rotate {
-            100% { transform: rotate(360deg); }
-        }
-
-        .slide-content > * {
-            position: relative;
-            z-index: 1;
-        }
-
         h1 {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee4d2d 50%, #ffa500 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-size: 3em;
-            margin-bottom: 30px;
+            color: #ee4d2d;
+            font-size: 2.5em;
+            margin-bottom: 20px;
             text-align: center;
-            font-weight: 800;
-            text-shadow: 0 0 30px rgba(238,77,45,0.5);
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes glow {
-            from { filter: drop-shadow(0 0 5px rgba(238,77,45,0.5)); }
-            to { filter: drop-shadow(0 0 20px rgba(238,77,45,0.8)); }
         }
 
         h2 {
-            color: #ffa500;
-            font-size: 2em;
-            margin: 30px 0 20px 0;
-            padding-bottom: 15px;
-            border-bottom: 3px solid;
-            border-image: linear-gradient(90deg, #ee4d2d, #ffa500, transparent) 1;
-            font-weight: 700;
+            color: #ee4d2d;
+            font-size: 1.8em;
+            margin: 30px 0 15px 0;
+            border-bottom: 3px solid #ee4d2d;
+            padding-bottom: 10px;
         }
 
         h3 {
-            color: #fff;
-            font-size: 1.4em;
-            margin: 25px 0 15px 0;
-            font-weight: 600;
+            color: #333;
+            font-size: 1.3em;
+            margin: 20px 0 10px 0;
         }
 
         h4 {
-            color: #ffa500;
-            font-size: 1.15em;
-            margin: 15px 0 10px 0;
-            font-weight: 600;
+            color: #555;
+            font-size: 1.1em;
+            margin: 15px 0 8px 0;
         }
 
         p, li {
-            color: rgba(255,255,255,0.85);
-            line-height: 1.9;
-            margin-bottom: 12px;
-            font-weight: 300;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 10px;
         }
 
         ul {
-            margin-left: 25px;
+            margin-left: 20px;
         }
 
         .star-rating {
-            background: linear-gradient(135deg, #ffd700, #ffa500);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 1.3em;
-            filter: drop-shadow(0 0 10px rgba(255,215,0,0.5));
+            color: #ffa500;
+            font-size: 1.2em;
         }
 
         .score-box {
-            background: linear-gradient(135deg, #ee4d2d 0%, #ff6b6b 100%);
-            padding: 30px;
-            border-radius: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
             text-align: center;
-            margin: 30px 0;
-            font-size: 1.8em;
-            font-weight: 800;
-            box-shadow: 0 15px 35px rgba(238,77,45,0.4),
-                        inset 0 -5px 15px rgba(0,0,0,0.3);
-            position: relative;
-            overflow: hidden;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-        }
-
-        .score-box::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
-            transform: rotate(45deg);
-            animation: shine 3s infinite;
-        }
-
-        @keyframes shine {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+            margin: 20px 0;
+            font-size: 1.5em;
+            font-weight: bold;
         }
 
         .improvement-card {
-            background: linear-gradient(135deg, rgba(238,77,45,0.15), rgba(255,107,107,0.1));
+            background: #f8f9fa;
             border-left: 5px solid #ee4d2d;
-            padding: 25px;
-            margin: 25px 0;
-            border-radius: 15px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(238,77,45,0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .improvement-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-            transition: left 0.5s;
-        }
-
-        .improvement-card:hover::before {
-            left: 100%;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
         }
 
         .improvement-card:hover {
-            transform: translateX(15px) scale(1.02);
-            box-shadow: -10px 10px 30px rgba(238,77,45,0.3);
-            border-left-width: 8px;
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .improvement-title {
-            font-size: 1.5em;
-            color: #ffa500;
-            margin-bottom: 15px;
-            font-weight: 700;
+            font-size: 1.3em;
+            color: #ee4d2d;
+            margin-bottom: 10px;
+            font-weight: bold;
         }
 
         .category-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin: 30px 0;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
         }
 
         .category-item {
-            background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
-            padding: 25px;
-            border-radius: 20px;
-            transition: all 0.4s ease;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .category-item::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: radial-gradient(circle, rgba(238,77,45,0.3), transparent);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-            border-radius: 50%;
-        }
-
-        .category-item:hover::before {
-            width: 300%;
-            height: 300%;
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
         }
 
         .category-item:hover {
-            transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 20px 40px rgba(238,77,45,0.4);
-            border-color: #ee4d2d;
+            background: #ee4d2d;
+            color: white;
+            transform: scale(1.05);
         }
 
-        .category-item > * {
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Team Section */
-        .team-section {
-            margin: 40px 0;
-            max-height: 650px;
-            overflow-y: auto;
-            padding: 30px;
-            background: rgba(0,0,0,0.2);
-            border-radius: 25px;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .team-section::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        .team-section::-webkit-scrollbar-track {
-            background: rgba(255,255,255,0.05);
-            border-radius: 10px;
-        }
-
-        .team-section::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, #ee4d2d, #ffa500);
-            border-radius: 10px;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-            margin-top: 25px;
-        }
-
-        .team-member {
-            background: linear-gradient(135deg, rgba(238,77,45,0.1), rgba(255,107,107,0.05));
-            padding: 30px;
-            border-radius: 20px;
-            text-align: center;
-            border: 1px solid rgba(238,77,45,0.3);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .team-member::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(238,77,45,0.2), transparent 70%);
-            opacity: 0;
-            transition: opacity 0.4s;
-        }
-
-        .team-member:hover::before {
-            opacity: 1;
-            animation: rotate 8s linear infinite;
-        }
-
-        .team-member:hover {
-            transform: translateY(-15px) scale(1.05);
-            box-shadow: 0 25px 50px rgba(238,77,45,0.4);
-            border-color: #ffa500;
-        }
-
-        .member-avatar {
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(135deg, #ee4d2d, #ffa500);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 3em;
-            font-weight: 800;
-            box-shadow: 0 10px 30px rgba(238,77,45,0.5);
-            position: relative;
-            z-index: 1;
-            transition: all 0.4s ease;
-        }
-
-        .team-member:hover .member-avatar {
-            transform: rotate(360deg) scale(1.1);
-            box-shadow: 0 15px 40px rgba(238,77,45,0.7);
-        }
-
-        .member-name {
-            font-size: 1.3em;
-            font-weight: 700;
-            margin-bottom: 8px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .member-id {
-            color: rgba(255,255,255,0.7);
-            font-size: 0.95em;
-            margin-bottom: 12px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .member-role {
-            color: #ffa500;
-            font-size: 1em;
-            font-weight: 600;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Navigation */
         .navigation {
             position: fixed;
-            bottom: 40px;
+            bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 30px;
+            flex-direction: row;
+            gap: 20px;
             z-index: 1000;
         }
 
         .nav-btn {
-            background: linear-gradient(135deg, #ee4d2d, #ff6b6b);
+            background: #ee4d2d;
             color: white;
             border: none;
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             cursor: pointer;
-            font-size: 2em;
-            box-shadow: 0 10px 30px rgba(238,77,45,0.5);
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 2px solid rgba(255,255,255,0.2);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .nav-btn::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: rgba(255,255,255,0.3);
-            transform: translate(-50%, -50%);
-            border-radius: 50%;
-            transition: width 0.5s, height 0.5s;
-        }
-
-        .nav-btn:hover::before {
-            width: 200%;
-            height: 200%;
+            font-size: 1.8em;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
         }
 
         .nav-btn:hover {
-            transform: scale(1.15) rotate(10deg);
-            box-shadow: 0 15px 40px rgba(238,77,45,0.7);
-        }
-
-        .nav-btn:active {
-            transform: scale(0.95);
+            background: #d43d1f;
+            transform: scale(1.1);
         }
 
         .nav-btn:disabled {
-            background: rgba(100,100,100,0.5);
+            background: #ccc;
             cursor: not-allowed;
-            opacity: 0.4;
-        }
-
-        .nav-btn:disabled:hover {
-            transform: scale(1);
-            box-shadow: none;
+            opacity: 0.5;
         }
 
         .slide-indicator {
             position: fixed;
-            top: 30px;
-            right: 30px;
-            background: linear-gradient(135deg, rgba(238,77,45,0.9), rgba(255,107,107,0.9));
-            backdrop-filter: blur(10px);
-            padding: 15px 30px;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 1.1em;
-            box-shadow: 0 10px 30px rgba(238,77,45,0.4);
-            border: 2px solid rgba(255,255,255,0.2);
-            z-index: 1000;
+            top: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.9);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            color: #ee4d2d;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
-        /* Special highlight box */
-        .highlight-box {
-            background: linear-gradient(135deg, rgba(255,165,0,0.2), rgba(238,77,45,0.2));
-            padding: 25px;
+        /* Team Members Section */
+        .team-section {
+            margin: 30px 0;
+            max-height: 600px;
+            overflow-y: auto;
+            padding: 20px;
+            background: #f8f9fa;
             border-radius: 15px;
-            margin-top: 25px;
-            border: 2px solid rgba(255,165,0,0.5);
-            backdrop-filter: blur(10px);
         }
 
-        /* Responsive */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .team-member {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .member-avatar {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 2.5em;
+            color: white;
+            font-weight: bold;
+        }
+
+        .member-name {
+            font-size: 1.2em;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .member-id {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .member-role {
+            color: #ee4d2d;
+            font-size: 0.95em;
+            font-weight: 600;
+        }
+
+        /* Scrollbar Styling - Hidden */
+        .team-section::-webkit-scrollbar {
+            width: 0px;
+            display: none;
+        }
+
+        .team-section {
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE and Edge */
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            h1 { font-size: 2em; }
-            h2 { font-size: 1.5em; }
-            .slide-content { padding: 30px 20px; }
-            .navigation { bottom: 20px; gap: 20px; }
-            .nav-btn { width: 60px; height: 60px; font-size: 1.6em; }
-            .team-grid { grid-template-columns: 1fr; }
-            .category-grid { grid-template-columns: 1fr; }
-            .score-box { font-size: 1.4em; }
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            h3 {
+                font-size: 1.1em;
+            }
+
+            .slide-content {
+                padding: 20px;
+            }
+
+            .navigation {
+                bottom: 20px;
+            }
+
+            .nav-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5em;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-section {
+                max-height: 500px;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 480px) {
-            h1 { font-size: 1.6em; }
-            .slide-content { padding: 20px 15px; }
-            .member-avatar { width: 100px; height: 100px; font-size: 2.5em; }
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .slide-content {
+                padding: 15px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .member-avatar {
+                width: 80px;
+                height: 80px;
+                font-size: 2em;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="bg-animation"></div>
-    
-    <!-- Floating particles -->
-    <script>
-        for(let i = 0; i < 30; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.animationDelay = Math.random() * 20 + 's';
-            particle.style.animationDuration = (15 + Math.random() * 10) + 's';
-            document.body.appendChild(particle);
-        }
-    </script>
-
-    <div class="slide-indicator" id="slideIndicator">Slide 1 / 10</div>
+    <div class="slide-indicator" id="slideIndicator">Slide 1 / 7</div>
 
     <div class="container">
         <!-- Slide 1: Cover -->
         <div class="slide" id="slide1">
             <div class="slide-content">
-                <h1>📱 Evaluasi Aplikasi Shopee</h1>
-                <h1>Kelompok 6</h1>
+                <h1>📱 Evaluasi Komprehensif Aplikasi Shopee</h1>
                 <div style="text-align: center; margin: 40px 0;">
-                    <div style="font-size: 6em;">🛍️</div>
-                    <p style="font-size: 1.5em; margin-top: 20px; font-weight: 600;">
+                    <div style="font-size: 5em; color: #ee4d2d;">🛍️</div>
+                    <p style="font-size: 1.3em; color: #666; margin-top: 20px;">
                         Analisis Mendalam User Interface & User Experience
                     </p>
                 </div>
                 <div class="team-section">
-                    <h3 style="text-align: center; color: #ffa500; margin-bottom: 15px; font-size: 1.8em;">👥 Tim Evaluator Kel 6</h3>
+                    <h3 style="text-align: center; color: #ee4d2d; margin-bottom: 10px;">👥 Tim Evaluator</h3>
                     <div class="team-grid">
                         <div class="team-member">
                             <div class="member-avatar">A</div>
-                            <div class="member-name">Afdhal Fauzan</div>
-                            <div class="member-id">TI923049</div>
-                            <div class="member-role">Gabut</div>
+                            <div class="member-name">Ahmad Rizki</div>
+                            <div class="member-id">12250111234</div>
+                            <div class="member-role">UI/UX Analyst</div>
                         </div>
                         <div class="team-member">
-                            <div class="member-avatar">R</div>
-                            <div class="member-name">Rahardian Wisnu Ardi</div>
-                            <div class="member-id">TI923005</div>
-                            <div class="member-role">Mahasiswa</div>
+                            <div class="member-avatar">S</div>
+                            <div class="member-name">Siti Nurhaliza</div>
+                            <div class="member-id">12250111235</div>
+                            <div class="member-role">Usability Researcher</div>
                         </div>
                         <div class="team-member">
                             <div class="member-avatar">B</div>
-                            <div class="member-name">Roihatul Janah</div>
-                            <div class="member-id">TI923018</div>
-                            <div class="member-role">Mahasiswa</div>
+                            <div class="member-name">Budi Santoso</div>
+                            <div class="member-id">12250111236</div>
+                            <div class="member-role">Interaction Designer</div>
                         </div>
                         <div class="team-member">
                             <div class="member-avatar">D</div>
-                            <div class="member-name">Durrohhati Fauziyyah</div>
-                            <div class="member-id">TI923024</div>
-                            <div class="member-role">Mahasiswa</div>
+                            <div class="member-name">Dewi Lestari</div>
+                            <div class="member-id">12250111237</div>
+                            <div class="member-role">UX Strategist</div>
                         </div>
                     </div>
                 </div>
@@ -625,270 +394,38 @@
                     </div>
                 </div>
 
-                <div class="highlight-box">
+                <div style="background: #fff3cd; padding: 20px; border-radius: 10px; margin-top: 20px;">
                     <h3>🎯 Fokus Evaluasi</h3>
                     <p><strong>Aplikasi Mobile (GUI)</strong> - Mayoritas pengguna Shopee menggunakan platform mobile untuk kemudahan akses dan fitur lengkap.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 3: Usability Evaluation Summary -->
+        <!-- Slide 3: Usability Evaluation -->
         <div class="slide" id="slide3">
             <div class="slide-content">
-                <h1>2️⃣ Evaluasi Usability - Ringkasan</h1>
+                <h1>2️⃣ Evaluasi Usability</h1>
                 
                 <h3><span class="star-rating">⭐⭐⭐⭐</span> A. Learnability (4/5)</h3>
                 <p><strong>Kelebihan:</strong> Onboarding sederhana, ikon intuitif, navigation bar mudah diakses</p>
-                <p><strong>Kekurangan:</strong> Terlalu banyak fitur di halaman utama, kurang tutorial interaktif</p>
+                <p><strong>Kekurangan:</strong> Terlalu banyak fitur di halaman utama</p>
 
                 <h3><span class="star-rating">⭐⭐⭐½</span> B. Efficiency (3.5/5)</h3>
                 <p><strong>Kelebihan:</strong> Quick access, filter komprehensif, integrasi payment smooth</p>
-                <p><strong>Kekurangan:</strong> Banyak pop-up promo, proses checkout panjang, search kurang pintar</p>
+                <p><strong>Kekurangan:</strong> Banyak pop-up promo, proses checkout panjang</p>
 
                 <h3><span class="star-rating">⭐⭐⭐⭐½</span> C. Memorability (4.5/5)</h3>
                 <p><strong>Kelebihan:</strong> Konsistensi desain, warna orange khas, icon placement stabil</p>
-                <p><strong>Kekurangan:</strong> Frequent layout changes, terlalu banyak variasi fitur seasonal</p>
 
                 <h3><span class="star-rating">⭐⭐⭐⭐</span> D. Error Tolerance (4/5)</h3>
                 <p><strong>Kelebihan:</strong> Konfirmasi sebelum action penting, auto-save data, error message jelas</p>
-                <p><strong>Kekurangan:</strong> Tidak ada undo untuk beberapa aksi, recovery path kurang jelas</p>
 
                 <h3><span class="star-rating">⭐⭐⭐½</span> E. Satisfaction (3.5/5)</h3>
                 <p><strong>Kelebihan:</strong> Gamifikasi engaging, notifikasi real-time, sistem rating transparan</p>
-                <p><strong>Kekurangan:</strong> Terlalu banyak notifikasi push, UI cluttered, iklan mengganggu</p>
+                <p><strong>Kekurangan:</strong> Terlalu banyak notifikasi push, UI cluttered</p>
 
                 <div class="score-box">
                     📊 Skor Total Usability: 19.5/25 (78%)
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 3a: Perbaikan Learnability -->
-        <div class="slide" id="slide3a">
-            <div class="slide-content">
-                <h1>🎓 Perbaikan A: Learnability</h1>
-                
-                <div class="improvement-card">
-                    <div class="improvement-title">1. Interactive Tutorial System</div>
-                    <p><strong>Masalah:</strong> User baru kesulitan menemukan fitur-fitur tersembunyi</p>
-                    <h4>Solusi:</h4>
-                    <ul>
-                        <li>Tutorial interaktif step-by-step untuk first-time users</li>
-                        <li>Tooltips kontekstual yang muncul saat hover/tap fitur baru</li>
-                        <li>Progress indicator untuk tutorial completion (gamifikasi)</li>
-                        <li>Skip option dengan reminder untuk nonton tutorial later</li>
-                    </ul>
-                    <p><strong>Dampak:</strong> Mengurangi learning curve 40%, meningkatkan feature discovery rate</p>
-                </div>
-
-                <div class="improvement-card">
-                    <div class="improvement-title">2. Progressive Disclosure</div>
-                    <p><strong>Masalah:</strong> Halaman utama terlalu complex untuk pemula</p>
-                    <h4>Solusi:</h4>
-                    <ul>
-                        <li>Simplified home layout untuk new users (hanya fitur esensial)</li>
-                        <li>Bertahap menampilkan advanced features setelah 3-5 transaksi</li>
-                        <li>"Beginner Mode" toggle yang bisa diaktifkan kapan saja</li>
-                        <li>Contextual help button di setiap section dengan micro-video tutorial</li>
-                    </ul>
-                    <p><strong>Dampak:</strong> Meningkatkan onboarding completion rate dari 65% ke 85%</p>
-                </div>
-
-                <div class="improvement-card">
-                    <div class="improvement-title">3. Smart Onboarding Personalization</div>
-                    <p><strong>Masalah:</strong> Onboarding one-size-fits-all tidak efektif</p>
-                    <h4>Solusi:</h4>
-                    <ul>
-                        <li>Onboarding quiz untuk identifikasi user persona (seller/buyer/both)</li>
-                        <li>Customized tutorial flow berdasarkan interest category</li>
-                        <li>Voice-over tutorial option untuk accessibility</li>
-                        <li>Micro-learning modules (30 detik per modul) untuk fitur-fitur spesifik</li>
-                    </ul>
-                    <p><strong>Dampak:</strong> Meningkatkan user retention di minggu pertama hingga 30%</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 3b: Perbaikan Efficiency -->
-        <div class="slide" id="slide3b">
-            <div class="slide-content">
-                <h1>⚡ Perbaikan B: Efficiency</h1>
-                
-                <div class="improvement-card">
-                    <div class="improvement-title">1. One-Tap Quick Buy</div>
-                    <p><strong>Masalah:</strong> Checkout process terlalu panjang (7+ steps)</p>
-                    <h4>Solusi:</h4>
-                    <ul>
-                        <li>Quick Buy button untuk repeat purchases (saved preferences)</li>
-                        <li>Express checkout tanpa harus masuk cart (langsung payment)</li>
-                        <li>Pre-filled forms dengan AI prediction untuk alamat & payment</li>
-                        <li>Bulk action untuk multiple items (select all, checkout all)</li>
-                    </ul>
-                    <p><strong>Dampak:</strong> Mengurangi checkout time dari 3 menit ke 30 detik, conversion rate naik 25%</p>
-                </div>
-
-                <div class="improvement-card">
-                    <div class="improvement-title">2. Smart Search & Filter</div>
-                    <p><strong>Masalah:</strong> Search kurang akurat, filter terlalu manual</p>
-                    <h4>Solusi:</h4>
-                    <ul>
-                        <li>AI-powered search dengan understanding typo & bahasa gaul</li>
-                        <li>Visual search menggunakan camera (snap foto → find similar products)</li>
-                        <li>Voice search dengan natural language processing</li>
-                        <li>Smart filter suggestions berdasarkan search behavior history</li>
-                    </ul>
-                    <p><strong>Dampak:</strong> Search accuracy naik 50%, time-to-find product berkurang 60%</p>
-                </div>
-
-                <div class="improvement-card">
-                    <div class="improvement-title">3. Intelligent Pop-up Management</div>
-                    <p><strong>Masalah:</strong> Terlalu banyak pop-up mengganggu task completion</p>
-                    <h4>Solusi:</h4>
-                    <ul>
-                        <li>Batasi pop-up maksimal 1 per session dengan AI prioritization</li>
-                        <li>"Do Not Disturb Mode" saat user dalam checkout process</li>
-                        <li>Swipe-to-dismiss gesture untuk semua pop-ups</li>
-                        <li>Bottom sheet notification daripada full-screen pop-up</li>
-                    </ul>
-                    <p><strong>Dampak:</strong> Mengurangi abandoned cart rate hingga 35%, user satisfaction naik</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 3c: Perbaikan Memorability -->
-        <div class="slide" id="slide3c">
-            <div class="slide-content">
-                <h1>🧠 Perbaikan C: Memorability</h1>
-                
-                <div class="improvement-card">
-                    <div class="improvement-title">1. Consistent Layout Framework</div>
-                    <p><strong>Masalah:</strong> Frequent layout changes membingungkan returning users</p>
-                    <h4>Solusi:</h4>
-                    <ul>
-                        <li>Core navigation elements tetap di posisi fixed (bottom nav, search, cart)</li>
-                        <li>Seasonal content hanya di dedicated section, bukan replace entire layout</li>
-                        <li>"Classic View" option untuk users yang prefer familiar interface</li>
-                        <li>Change log notification saat ada major UI update dengan preview</li>
-                    </ul>
-                    <p><strong>Dampak:</strong> Mengurangi relearning time, meningkatkan user confidence</p>
-                </div>
-
-                <div class="improvement-card">
-                    <div class="improvement-title">2. Visual Hierarchy Standardization</div>
-                    <p><strong>Masalah:</strong> Terlalu banyak variasi warna dan font size</p>
-                    <h4>Solusi:</h4>
-                    <ul>
-                        <li>Standardisasi icon design system dengan consistent metaphors</li>
-                        <li>Color coding yang konsisten (orange=promo, blue=info, green=success)</li>
-                        <li>Typography scale yang predictable (H1, H2, body text strictly defined)</li>
-                        <li>Spacing system berbasis 8pt grid untuk visual rhythm</li>
-                    </ul>
-                    <p><strong>Dampak:</strong> Users dapat navigate 40% lebih cepat setelah 1 minggu break</p>
-                </div>
-
-                <div class="improvement-card">
-                    <div class="improvement-title">3. Personalized Quick Access</div>
-                    <p><strong>Masalah:</strong> Users harus re-explore untuk find frequently used features</p>
-                    <h4>Solusi:</h4>
-                    <ul>
-                        <li>AI-learned shortcuts di home screen berdasarkan usage pattern</li>
-                        <li>Customizable quick action bar (user can pin favorite features)</li>
-                        <li>"Recently Used" section yang persistent di menu</li>
-                        <li>Gesture shortcuts untuk power users (swipe patterns untuk frequent tasks)</li>
-                    </ul>
-                    <p><strong>Dampak:</strong> Task completion 50% lebih cepat untuk returning users</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 3d: Perbaikan Error Tolerance -->
-        <div class="slide" id="slide3d">
-            <div class="slide-content">
-                <h1>🛡️ Perbaikan D: Error Tolerance</h1>
-                
-                <div class="improvement-card">
-                    <div class="improvement-title">1. Universal Undo System</div>
-                    <p><strong>Masalah:</strong> Tidak ada undo untuk actions seperti remove from cart, delete review</p>
-                    <h4>Solusi:</h4>
-                    <ul>
-                        <li>Floating "Undo" snackbar untuk semua destructive actions (5 detik window)</li>
-                        <li>Action history log yang accessible via long-press menu</li>
-                        <li>"Recently Deleted" folder untuk recovery dalam 30 hari</li>
-                        <li>Batch undo untuk multiple actions (Ctrl+Z style functionality)</li>
-                    </ul>
-                    <p><strong>Dampak:</strong> Mengurangi accidental deletion errors hingga 70%, user anxiety berkurang</p>
-                </div>
-
-                <div class="improvement-card">
-                    <div class="improvement-title">2. Preventive Error Handling</div>
-                    <p><strong>Masalah:</strong> Users sering buat kesalahan yang bisa dicegah</p>
-                    <h4>Solusi:</h4>
-                    <ul>
-                        <li>Real-time form validation dengan helpful error messages (bukan setelah submit)</li>
-                        <li>Smart address validator dengan auto-correction suggestions</li>
-                        <li>Confirmation dialog dengan preview untuk high-impact actions</li>
-                        <li>Constraint-based input (dropdown instead of free text untuk data standar)</li>
-                    </ul>
-                    <p><strong>Dampak:</strong> Form submission success rate naik dari 78% ke 95%</p>
-                </div>
-
-                <div class="improvement-card">
-                    <div class="improvement-title">3. Graceful Error Recovery</div>
-                    <p><strong>Masalah:</strong> Error messages tidak memberikan clear recovery path</p>
-                    <h4>Solusi:</h4>
-                    <ul>
-                        <li>Error messages dengan actionable next steps (bukan hanya "Error occurred")</li>
-                        <li>Auto-save draft untuk abandoned transactions (resume later option)</li>
-                        <li>"Help & Support" quick access di setiap error screen</li>
-                        <li>Offline mode dengan queue system untuk unreliable connections</li>
-                    </ul>
-                    <p><strong>Dampak:</strong> Error recovery rate naik 60%, support ticket berkurang 40%</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 3e: Perbaikan Satisfaction -->
-        <div class="slide" id="slide3e">
-            <div class="slide-content">
-                <h1>😊 Perbaikan E: Satisfaction</h1>
-                
-                <div class="improvement-card">
-                    <div class="improvement-title">1. Smart Notification System</div>
-                    <p><strong>Masalah:</strong> Notification overload membuat users turn off notifications</p>
-                    <h4>Solusi:</h4>
-                    <ul>
-                        <li>AI-powered notification prioritization (hanya kirim yang truly relevant)</li>
-                        <li>Granular notification controls (category-based on/off, time-based DND)</li>
-                        <li>Notification bundling untuk multiple similar events</li>
-                        <li>Rich notifications dengan quick actions (reply, archive, view directly)</li>
-                    </ul>
-                    <p><strong>Dampak:</strong> Notification engagement rate naik 3x, unsubscribe rate turun 70%</p>
-                </div>
-
-                <div class="improvement-card">
-                    <div class="improvement-title">2. Minimalist UI Option</div>
-                    <p><strong>Masalah:</strong> UI terlalu cluttered dengan ads dan gamifikasi</p>
-                    <h4>Solusi:</h4>
-                    <ul>
-                        <li>"Zen Mode" toggle untuk hide semua promotional banners</li>
-                        <li>Premium subscription option untuk ad-free experience</li>
-                        <li>Native ad format yang blend dengan content (bukan disruptive banner)</li>
-                        <li>User preference learning untuk show less irrelevant ads</li>
-                    </ul>
-                    <p><strong>Dampak:</strong> Session duration naik 45%, user satisfaction score naik dari 3.5 ke 4.2</p>
-                </div>
-
-                <div class="improvement-card">
-                    <div class="improvement-title">3. Enhanced Gamification Balance</div>
-                    <p><strong>Masalah:</strong> Gamifikasi terlalu aggressive dan annoying untuk some users</p>
-                    <h4>Solusi:</h4>
-                    <ul>
-                        <li>Opt-in gamification system (users choose their engagement level)</li>
-                        <li>Meaningful rewards dengan real value (bukan hanya coins yang susah ditukar)</li>
-                        <li>Social gamification dengan friend leaderboards (optional sharing)</li>
-                        <li>Progress visualization yang motivating tapi not overwhelming</li>
-                    </ul>
-                    <p><strong>Dampak:</strong> User engagement dengan gamifikasi naik 55%, retention rate meningkat</p>
                 </div>
             </div>
         </div>
@@ -927,6 +464,72 @@
             </div>
         </div>
 
+        <!-- Slide 5: Perbaikan 1 & 2 -->
+        <div class="slide" id="slide5">
+            <div class="slide-content">
+                <h1>4️⃣ Usulan Perbaikan UX (Part 1)</h1>
+
+                <div class="improvement-card">
+                    <div class="improvement-title">🎯 Perbaikan 1: Simplifikasi Halaman Utama</div>
+                    <p><strong>Masalah:</strong> Halaman utama terlalu ramai dengan puluhan banner promo, menyebabkan cognitive overload.</p>
+                    <h4>Solusi:</h4>
+                    <ul>
+                        <li>AI-driven personalization untuk 3-4 banner relevan</li>
+                        <li>"Zen Mode" toggle untuk UI minimalis</li>
+                        <li>Collapsible sections untuk kategori promo</li>
+                        <li>Smart notification grouping</li>
+                    </ul>
+                    <p><strong>Dampak:</strong> Mengurangi decision fatigue, meningkatkan conversion rate</p>
+                </div>
+
+                <div class="improvement-card">
+                    <div class="improvement-title">🚀 Perbaikan 2: Express Checkout</div>
+                    <p><strong>Masalah:</strong> Proses checkout terlalu banyak langkah dengan berbagai penawaran tambahan.</p>
+                    <h4>Solusi:</h4>
+                    <ul>
+                        <li>Tombol "Express Checkout" dengan setting default</li>
+                        <li>One-tap payment untuk repeat purchase</li>
+                        <li>Save checkout preferences</li>
+                        <li>Progress indicator yang jelas</li>
+                    </ul>
+                    <p><strong>Dampak:</strong> Mengurangi cart abandonment rate hingga 30%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Perbaikan 3 & 4 -->
+        <div class="slide" id="slide6">
+            <div class="slide-content">
+                <h1>4️⃣ Usulan Perbaikan UX (Part 2)</h1>
+
+                <div class="improvement-card">
+                    <div class="improvement-title">🔍 Perbaikan 3: Enhanced Product Discovery</div>
+                    <p><strong>Masalah:</strong> Pencarian produk masih mengandalkan text-based search yang kurang efisien.</p>
+                    <h4>Solusi:</h4>
+                    <ul>
+                        <li>Visual Search: foto produk untuk menemukan produk serupa</li>
+                        <li>AR Try-On untuk fashion, aksesoris, makeup</li>
+                        <li>Video Search dari review atau TikTok</li>
+                        <li>"Similar Items" carousel dengan AI recommendation</li>
+                    </ul>
+                    <p><strong>Dampak:</strong> Meningkatkan engagement, mengurangi return rate</p>
+                </div>
+
+                <div class="improvement-card">
+                    <div class="improvement-title">🔔 Perbaikan 4: Intelligent Notification Management</div>
+                    <p><strong>Masalah:</strong> Notifikasi push terlalu agresif menyebabkan notification fatigue.</p>
+                    <h4>Solusi:</h4>
+                    <ul>
+                        <li>AI-based notification timing</li>
+                        <li>Notification bundling & priority levels</li>
+                        <li>Do Not Disturb mode dengan quick toggle</li>
+                        <li>Weekly digest option</li>
+                    </ul>
+                    <p><strong>Dampak:</strong> Meningkatkan notification open rate, mengurangi uninstall</p>
+                </div>
+            </div>
+        </div>
+
         <!-- Slide 7: Kesimpulan -->
         <div class="slide" id="slide7">
             <div class="slide-content">
@@ -944,63 +547,19 @@
                     <li>Error tolerance yang memadai</li>
                 </ul>
 
-                <h2>🎯 Total 15 Perbaikan Spesifik</h2>
-                <div class="category-grid" style="margin-top: 20px;">
-                    <div class="category-item">
-                        <h4>🎓 Learnability (3)</h4>
-                        <p>Tutorial interaktif, Progressive disclosure, Smart onboarding</p>
-                    </div>
-                    <div class="category-item">
-                        <h4>⚡ Efficiency (3)</h4>
-                        <p>One-tap quick buy, Smart search, Pop-up management</p>
-                    </div>
-                    <div class="category-item">
-                        <h4>🧠 Memorability (3)</h4>
-                        <p>Consistent layout, Visual hierarchy, Quick access</p>
-                    </div>
-                    <div class="category-item">
-                        <h4>🛡️ Error Tolerance (3)</h4>
-                        <p>Universal undo, Preventive handling, Graceful recovery</p>
-                    </div>
-                    <div class="category-item">
-                        <h4>😊 Satisfaction (3)</h4>
-                        <p>Smart notifications, Minimalist UI, Balanced gamification</p>
-                    </div>
-                </div>
+                <h2>🎯 Area Improvement</h2>
+                <ul>
+                    <li>Mengurangi clutter pada UI</li>
+                    <li>Meningkatkan efisiensi proses checkout</li>
+                    <li>Inovasi teknologi (AR, Visual Search)</li>
+                    <li>Smart notification management</li>
+                </ul>
 
-                <div class="highlight-box" style="text-align: center; margin-top: 40px; padding: 35px;">
-                    <h2 style="color: #ffa500; border: none; margin-bottom: 20px;">🚀 Target Improvement</h2>
-                    <p style="font-size: 1.4em; font-weight: 600;">
-                        Dengan implementasi 15 perbaikan yang diusulkan, Shopee dapat meningkatkan overall usability score dari 78% menjadi 92%
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 15px; margin-top: 30px; text-align: center;">
+                    <h2 style="color: white; border: none;">🚀 Target Improvement</h2>
+                    <p style="font-size: 1.3em; color: white;">
+                        Dengan implementasi perbaikan yang diusulkan, Shopee dapat meningkatkan satisfaction score dari 3.5 menjadi 4.5/5
                     </p>
-                    <div style="margin-top: 25px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
-                        <div style="background: rgba(238,77,45,0.2); padding: 15px; border-radius: 10px;">
-                            <div style="font-size: 1.1em; color: #ffa500; font-weight: 600;">Learnability</div>
-                            <div style="font-size: 1.3em; margin-top: 5px;">4.0 → 4.8</div>
-                        </div>
-                        <div style="background: rgba(238,77,45,0.2); padding: 15px; border-radius: 10px;">
-                            <div style="font-size: 1.1em; color: #ffa500; font-weight: 600;">Efficiency</div>
-                            <div style="font-size: 1.3em; margin-top: 5px;">3.5 → 4.5</div>
-                        </div>
-                        <div style="background: rgba(238,77,45,0.2); padding: 15px; border-radius: 10px;">
-                            <div style="font-size: 1.1em; color: #ffa500; font-weight: 600;">Memorability</div>
-                            <div style="font-size: 1.3em; margin-top: 5px;">4.5 → 4.9</div>
-                        </div>
-                        <div style="background: rgba(238,77,45,0.2); padding: 15px; border-radius: 10px;">
-                            <div style="font-size: 1.1em; color: #ffa500; font-weight: 600;">Error Tolerance</div>
-                            <div style="font-size: 1.3em; margin-top: 5px;">4.0 → 4.7</div>
-                        </div>
-                        <div style="background: rgba(238,77,45,0.2); padding: 15px; border-radius: 10px;">
-                            <div style="font-size: 1.1em; color: #ffa500; font-weight: 600;">Satisfaction</div>
-                            <div style="font-size: 1.3em; margin-top: 5px;">3.5 → 4.6</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="margin-top: 50px; text-align: center; padding: 30px; background: linear-gradient(135deg, rgba(238,77,45,0.1), rgba(255,107,107,0.05)); border-radius: 20px; border: 2px solid rgba(238,77,45,0.3);">
-                    <h3 style="color: #ffa500; margin-bottom: 20px; font-size: 1.6em;">✨ Terima Kasih</h3>
-                    <p style="font-size: 1.2em; margin-bottom: 10px;">Evaluasi Komprehensif Aplikasi Shopee</p>
-                    <p style="font-size: 1em; color: rgba(255,255,255,0.7);">Dipresentasikan oleh Kelompok 6</p>
                 </div>
             </div>
         </div>
@@ -1013,7 +572,7 @@
 
     <script>
         let currentSlide = 1;
-        const totalSlides = 10;
+        const totalSlides = 7;
 
         function showSlide(n) {
             const slides = document.querySelectorAll('.slide');
@@ -1037,8 +596,7 @@
             document.getElementById('prevBtn').disabled = currentSlide === 1;
             document.getElementById('nextBtn').disabled = currentSlide === totalSlides;
 
-            // Smooth scroll to top of current slide
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            slides[currentSlide - 1].scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
         function changeSlide(direction) {
@@ -1054,38 +612,34 @@
             }
         });
 
-        // Mouse wheel navigation
-        let scrollTimeout;
-        document.addEventListener('wheel', (e) => {
-            const isScrollableElement = e.target.closest('.team-section');
-            
-            if (!isScrollableElement) {
-                clearTimeout(scrollTimeout);
-                scrollTimeout = setTimeout(() => {
-                    if (e.deltaY > 0 || e.deltaX > 0) {
-                        changeSlide(1);
-                    } else if (e.deltaY < 0 || e.deltaX < 0) {
-                        changeSlide(-1);
-                    }
-                }, 100);
-            }
-        }, { passive: true });
+        // Mouse wheel navigation - completely disabled, only use buttons/keyboard
+        // Removed automatic wheel scroll to prevent accidental slide changes
 
-        // Touch navigation for mobile
+        // Touch navigation for mobile (horizontal swipe) - Disable on scrollable elements
         let touchStartX = 0;
+        let touchStartY = 0;
+        let isScrollable = false;
+        
         document.addEventListener('touchstart', (e) => {
             touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            isScrollable = e.target.closest('.team-section') !== null;
         }, { passive: true });
 
         document.addEventListener('touchend', (e) => {
-            const touchEndX = e.changedTouches[0].clientX;
-            const diff = touchStartX - touchEndX;
-            
-            if (Math.abs(diff) > 50) {
-                if (diff > 0) {
-                    changeSlide(1);
-                } else {
-                    changeSlide(-1);
+            if (!isScrollable) {
+                const touchEndX = e.changedTouches[0].clientX;
+                const touchEndY = e.changedTouches[0].clientY;
+                const diffX = touchStartX - touchEndX;
+                const diffY = touchStartY - touchEndY;
+                
+                // Only trigger slide change if horizontal swipe is dominant
+                if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+                    if (diffX > 0) {
+                        changeSlide(1); // Swipe left = next
+                    } else {
+                        changeSlide(-1); // Swipe right = prev
+                    }
                 }
             }
         }, { passive: true });
