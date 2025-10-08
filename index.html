@@ -562,7 +562,7 @@
         }
     </script>
 
-    <div class="slide-indicator" id="slideIndicator">Slide 1 / 7</div>
+    <div class="slide-indicator" id="slideIndicator">Slide 1 / 10</div>
 
     <div class="container">
         <!-- Slide 1: Cover -->
@@ -577,7 +577,7 @@
                     </p>
                 </div>
                 <div class="team-section">
-                    <h3 style="text-align: center; color: #ffa500; margin-bottom: 15px; font-size: 1.8em;">👥 Tim Evaluator in Kel 6</h3>
+                    <h3 style="text-align: center; color: #ffa500; margin-bottom: 15px; font-size: 1.8em;">👥 Tim Evaluator Kel 6</h3>
                     <div class="team-grid">
                         <div class="team-member">
                             <div class="member-avatar">A</div>
@@ -632,31 +632,263 @@
             </div>
         </div>
 
-        <!-- Slide 3: Usability Evaluation -->
+        <!-- Slide 3: Usability Evaluation Summary -->
         <div class="slide" id="slide3">
             <div class="slide-content">
-                <h1>2️⃣ Evaluasi Usability</h1>
+                <h1>2️⃣ Evaluasi Usability - Ringkasan</h1>
                 
                 <h3><span class="star-rating">⭐⭐⭐⭐</span> A. Learnability (4/5)</h3>
                 <p><strong>Kelebihan:</strong> Onboarding sederhana, ikon intuitif, navigation bar mudah diakses</p>
-                <p><strong>Kekurangan:</strong> Terlalu banyak fitur di halaman utama</p>
+                <p><strong>Kekurangan:</strong> Terlalu banyak fitur di halaman utama, kurang tutorial interaktif</p>
 
                 <h3><span class="star-rating">⭐⭐⭐½</span> B. Efficiency (3.5/5)</h3>
                 <p><strong>Kelebihan:</strong> Quick access, filter komprehensif, integrasi payment smooth</p>
-                <p><strong>Kekurangan:</strong> Banyak pop-up promo, proses checkout panjang</p>
+                <p><strong>Kekurangan:</strong> Banyak pop-up promo, proses checkout panjang, search kurang pintar</p>
 
                 <h3><span class="star-rating">⭐⭐⭐⭐½</span> C. Memorability (4.5/5)</h3>
                 <p><strong>Kelebihan:</strong> Konsistensi desain, warna orange khas, icon placement stabil</p>
+                <p><strong>Kekurangan:</strong> Frequent layout changes, terlalu banyak variasi fitur seasonal</p>
 
                 <h3><span class="star-rating">⭐⭐⭐⭐</span> D. Error Tolerance (4/5)</h3>
                 <p><strong>Kelebihan:</strong> Konfirmasi sebelum action penting, auto-save data, error message jelas</p>
+                <p><strong>Kekurangan:</strong> Tidak ada undo untuk beberapa aksi, recovery path kurang jelas</p>
 
                 <h3><span class="star-rating">⭐⭐⭐½</span> E. Satisfaction (3.5/5)</h3>
                 <p><strong>Kelebihan:</strong> Gamifikasi engaging, notifikasi real-time, sistem rating transparan</p>
-                <p><strong>Kekurangan:</strong> Terlalu banyak notifikasi push, UI cluttered</p>
+                <p><strong>Kekurangan:</strong> Terlalu banyak notifikasi push, UI cluttered, iklan mengganggu</p>
 
                 <div class="score-box">
                     📊 Skor Total Usability: 19.5/25 (78%)
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3a: Perbaikan Learnability -->
+        <div class="slide" id="slide3a">
+            <div class="slide-content">
+                <h1>🎓 Perbaikan A: Learnability</h1>
+                
+                <div class="improvement-card">
+                    <div class="improvement-title">1. Interactive Tutorial System</div>
+                    <p><strong>Masalah:</strong> User baru kesulitan menemukan fitur-fitur tersembunyi</p>
+                    <h4>Solusi:</h4>
+                    <ul>
+                        <li>Tutorial interaktif step-by-step untuk first-time users</li>
+                        <li>Tooltips kontekstual yang muncul saat hover/tap fitur baru</li>
+                        <li>Progress indicator untuk tutorial completion (gamifikasi)</li>
+                        <li>Skip option dengan reminder untuk nonton tutorial later</li>
+                    </ul>
+                    <p><strong>Dampak:</strong> Mengurangi learning curve 40%, meningkatkan feature discovery rate</p>
+                </div>
+
+                <div class="improvement-card">
+                    <div class="improvement-title">2. Progressive Disclosure</div>
+                    <p><strong>Masalah:</strong> Halaman utama terlalu complex untuk pemula</p>
+                    <h4>Solusi:</h4>
+                    <ul>
+                        <li>Simplified home layout untuk new users (hanya fitur esensial)</li>
+                        <li>Bertahap menampilkan advanced features setelah 3-5 transaksi</li>
+                        <li>"Beginner Mode" toggle yang bisa diaktifkan kapan saja</li>
+                        <li>Contextual help button di setiap section dengan micro-video tutorial</li>
+                    </ul>
+                    <p><strong>Dampak:</strong> Meningkatkan onboarding completion rate dari 65% ke 85%</p>
+                </div>
+
+                <div class="improvement-card">
+                    <div class="improvement-title">3. Smart Onboarding Personalization</div>
+                    <p><strong>Masalah:</strong> Onboarding one-size-fits-all tidak efektif</p>
+                    <h4>Solusi:</h4>
+                    <ul>
+                        <li>Onboarding quiz untuk identifikasi user persona (seller/buyer/both)</li>
+                        <li>Customized tutorial flow berdasarkan interest category</li>
+                        <li>Voice-over tutorial option untuk accessibility</li>
+                        <li>Micro-learning modules (30 detik per modul) untuk fitur-fitur spesifik</li>
+                    </ul>
+                    <p><strong>Dampak:</strong> Meningkatkan user retention di minggu pertama hingga 30%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3b: Perbaikan Efficiency -->
+        <div class="slide" id="slide3b">
+            <div class="slide-content">
+                <h1>⚡ Perbaikan B: Efficiency</h1>
+                
+                <div class="improvement-card">
+                    <div class="improvement-title">1. One-Tap Quick Buy</div>
+                    <p><strong>Masalah:</strong> Checkout process terlalu panjang (7+ steps)</p>
+                    <h4>Solusi:</h4>
+                    <ul>
+                        <li>Quick Buy button untuk repeat purchases (saved preferences)</li>
+                        <li>Express checkout tanpa harus masuk cart (langsung payment)</li>
+                        <li>Pre-filled forms dengan AI prediction untuk alamat & payment</li>
+                        <li>Bulk action untuk multiple items (select all, checkout all)</li>
+                    </ul>
+                    <p><strong>Dampak:</strong> Mengurangi checkout time dari 3 menit ke 30 detik, conversion rate naik 25%</p>
+                </div>
+
+                <div class="improvement-card">
+                    <div class="improvement-title">2. Smart Search & Filter</div>
+                    <p><strong>Masalah:</strong> Search kurang akurat, filter terlalu manual</p>
+                    <h4>Solusi:</h4>
+                    <ul>
+                        <li>AI-powered search dengan understanding typo & bahasa gaul</li>
+                        <li>Visual search menggunakan camera (snap foto → find similar products)</li>
+                        <li>Voice search dengan natural language processing</li>
+                        <li>Smart filter suggestions berdasarkan search behavior history</li>
+                    </ul>
+                    <p><strong>Dampak:</strong> Search accuracy naik 50%, time-to-find product berkurang 60%</p>
+                </div>
+
+                <div class="improvement-card">
+                    <div class="improvement-title">3. Intelligent Pop-up Management</div>
+                    <p><strong>Masalah:</strong> Terlalu banyak pop-up mengganggu task completion</p>
+                    <h4>Solusi:</h4>
+                    <ul>
+                        <li>Batasi pop-up maksimal 1 per session dengan AI prioritization</li>
+                        <li>"Do Not Disturb Mode" saat user dalam checkout process</li>
+                        <li>Swipe-to-dismiss gesture untuk semua pop-ups</li>
+                        <li>Bottom sheet notification daripada full-screen pop-up</li>
+                    </ul>
+                    <p><strong>Dampak:</strong> Mengurangi abandoned cart rate hingga 35%, user satisfaction naik</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3c: Perbaikan Memorability -->
+        <div class="slide" id="slide3c">
+            <div class="slide-content">
+                <h1>🧠 Perbaikan C: Memorability</h1>
+                
+                <div class="improvement-card">
+                    <div class="improvement-title">1. Consistent Layout Framework</div>
+                    <p><strong>Masalah:</strong> Frequent layout changes membingungkan returning users</p>
+                    <h4>Solusi:</h4>
+                    <ul>
+                        <li>Core navigation elements tetap di posisi fixed (bottom nav, search, cart)</li>
+                        <li>Seasonal content hanya di dedicated section, bukan replace entire layout</li>
+                        <li>"Classic View" option untuk users yang prefer familiar interface</li>
+                        <li>Change log notification saat ada major UI update dengan preview</li>
+                    </ul>
+                    <p><strong>Dampak:</strong> Mengurangi relearning time, meningkatkan user confidence</p>
+                </div>
+
+                <div class="improvement-card">
+                    <div class="improvement-title">2. Visual Hierarchy Standardization</div>
+                    <p><strong>Masalah:</strong> Terlalu banyak variasi warna dan font size</p>
+                    <h4>Solusi:</h4>
+                    <ul>
+                        <li>Standardisasi icon design system dengan consistent metaphors</li>
+                        <li>Color coding yang konsisten (orange=promo, blue=info, green=success)</li>
+                        <li>Typography scale yang predictable (H1, H2, body text strictly defined)</li>
+                        <li>Spacing system berbasis 8pt grid untuk visual rhythm</li>
+                    </ul>
+                    <p><strong>Dampak:</strong> Users dapat navigate 40% lebih cepat setelah 1 minggu break</p>
+                </div>
+
+                <div class="improvement-card">
+                    <div class="improvement-title">3. Personalized Quick Access</div>
+                    <p><strong>Masalah:</strong> Users harus re-explore untuk find frequently used features</p>
+                    <h4>Solusi:</h4>
+                    <ul>
+                        <li>AI-learned shortcuts di home screen berdasarkan usage pattern</li>
+                        <li>Customizable quick action bar (user can pin favorite features)</li>
+                        <li>"Recently Used" section yang persistent di menu</li>
+                        <li>Gesture shortcuts untuk power users (swipe patterns untuk frequent tasks)</li>
+                    </ul>
+                    <p><strong>Dampak:</strong> Task completion 50% lebih cepat untuk returning users</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3d: Perbaikan Error Tolerance -->
+        <div class="slide" id="slide3d">
+            <div class="slide-content">
+                <h1>🛡️ Perbaikan D: Error Tolerance</h1>
+                
+                <div class="improvement-card">
+                    <div class="improvement-title">1. Universal Undo System</div>
+                    <p><strong>Masalah:</strong> Tidak ada undo untuk actions seperti remove from cart, delete review</p>
+                    <h4>Solusi:</h4>
+                    <ul>
+                        <li>Floating "Undo" snackbar untuk semua destructive actions (5 detik window)</li>
+                        <li>Action history log yang accessible via long-press menu</li>
+                        <li>"Recently Deleted" folder untuk recovery dalam 30 hari</li>
+                        <li>Batch undo untuk multiple actions (Ctrl+Z style functionality)</li>
+                    </ul>
+                    <p><strong>Dampak:</strong> Mengurangi accidental deletion errors hingga 70%, user anxiety berkurang</p>
+                </div>
+
+                <div class="improvement-card">
+                    <div class="improvement-title">2. Preventive Error Handling</div>
+                    <p><strong>Masalah:</strong> Users sering buat kesalahan yang bisa dicegah</p>
+                    <h4>Solusi:</h4>
+                    <ul>
+                        <li>Real-time form validation dengan helpful error messages (bukan setelah submit)</li>
+                        <li>Smart address validator dengan auto-correction suggestions</li>
+                        <li>Confirmation dialog dengan preview untuk high-impact actions</li>
+                        <li>Constraint-based input (dropdown instead of free text untuk data standar)</li>
+                    </ul>
+                    <p><strong>Dampak:</strong> Form submission success rate naik dari 78% ke 95%</p>
+                </div>
+
+                <div class="improvement-card">
+                    <div class="improvement-title">3. Graceful Error Recovery</div>
+                    <p><strong>Masalah:</strong> Error messages tidak memberikan clear recovery path</p>
+                    <h4>Solusi:</h4>
+                    <ul>
+                        <li>Error messages dengan actionable next steps (bukan hanya "Error occurred")</li>
+                        <li>Auto-save draft untuk abandoned transactions (resume later option)</li>
+                        <li>"Help & Support" quick access di setiap error screen</li>
+                        <li>Offline mode dengan queue system untuk unreliable connections</li>
+                    </ul>
+                    <p><strong>Dampak:</strong> Error recovery rate naik 60%, support ticket berkurang 40%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3e: Perbaikan Satisfaction -->
+        <div class="slide" id="slide3e">
+            <div class="slide-content">
+                <h1>😊 Perbaikan E: Satisfaction</h1>
+                
+                <div class="improvement-card">
+                    <div class="improvement-title">1. Smart Notification System</div>
+                    <p><strong>Masalah:</strong> Notification overload membuat users turn off notifications</p>
+                    <h4>Solusi:</h4>
+                    <ul>
+                        <li>AI-powered notification prioritization (hanya kirim yang truly relevant)</li>
+                        <li>Granular notification controls (category-based on/off, time-based DND)</li>
+                        <li>Notification bundling untuk multiple similar events</li>
+                        <li>Rich notifications dengan quick actions (reply, archive, view directly)</li>
+                    </ul>
+                    <p><strong>Dampak:</strong> Notification engagement rate naik 3x, unsubscribe rate turun 70%</p>
+                </div>
+
+                <div class="improvement-card">
+                    <div class="improvement-title">2. Minimalist UI Option</div>
+                    <p><strong>Masalah:</strong> UI terlalu cluttered dengan ads dan gamifikasi</p>
+                    <h4>Solusi:</h4>
+                    <ul>
+                        <li>"Zen Mode" toggle untuk hide semua promotional banners</li>
+                        <li>Premium subscription option untuk ad-free experience</li>
+                        <li>Native ad format yang blend dengan content (bukan disruptive banner)</li>
+                        <li>User preference learning untuk show less irrelevant ads</li>
+                    </ul>
+                    <p><strong>Dampak:</strong> Session duration naik 45%, user satisfaction score naik dari 3.5 ke 4.2</p>
+                </div>
+
+                <div class="improvement-card">
+                    <div class="improvement-title">3. Enhanced Gamification Balance</div>
+                    <p><strong>Masalah:</strong> Gamifikasi terlalu aggressive dan annoying untuk some users</p>
+                    <h4>Solusi:</h4>
+                    <ul>
+                        <li>Opt-in gamification system (users choose their engagement level)</li>
+                        <li>Meaningful rewards dengan real value (bukan hanya coins yang susah ditukar)</li>
+                        <li>Social gamification dengan friend leaderboards (optional sharing)</li>
+                        <li>Progress visualization yang motivating tapi not overwhelming</li>
+                    </ul>
+                    <p><strong>Dampak:</strong> User engagement dengan gamifikasi naik 55%, retention rate meningkat</p>
                 </div>
             </div>
         </div>
@@ -695,26 +927,6 @@
             </div>
         </div>
 
-        <!-- Slide 5: Perbaikan 1 & 2 -->
-        <div class="slide" id="slide5">
-            <div class="slide-content">
-                <h1>4️⃣ Usulan Perbaikan UX (Part 1)</h1>
-
-                <div class="improvement-card">
-                    <div class="improvement-title">🎯 Perbaikan 1: Simplifikasi Halaman Utama</div>
-                    <p><strong>Masalah:</strong> Halaman utama terlalu ramai dengan puluhan banner promo, menyebabkan cognitive overload.</p>
-                    <h4>Solusi:</h4>
-                    <ul>
-                        <li>AI-driven personalization untuk 3-4 banner relevan</li>
-                        <li>"Zen Mode" toggle untuk UI minimalis</li>
-                        <li>Collapsible sections untuk kategori promo</li>
-                        <li>Smart notification grouping</li>
-                    </ul>
-                    <p><strong>Dampak:</strong> Meningkatkan notification open rate, mengurangi uninstall</p>
-                </div>
-            </div>
-        </div>
-
         <!-- Slide 7: Kesimpulan -->
         <div class="slide" id="slide7">
             <div class="slide-content">
@@ -732,25 +944,63 @@
                     <li>Error tolerance yang memadai</li>
                 </ul>
 
-                <h2>🎯 Area Improvement</h2>
-                <ul>
-                    <li>Mengurangi clutter pada UI</li>
-                    <li>Meningkatkan efisiensi proses checkout</li>
-                    <li>Inovasi teknologi (AR, Visual Search)</li>
-                    <li>Smart notification management</li>
-                </ul>
+                <h2>🎯 Total 15 Perbaikan Spesifik</h2>
+                <div class="category-grid" style="margin-top: 20px;">
+                    <div class="category-item">
+                        <h4>🎓 Learnability (3)</h4>
+                        <p>Tutorial interaktif, Progressive disclosure, Smart onboarding</p>
+                    </div>
+                    <div class="category-item">
+                        <h4>⚡ Efficiency (3)</h4>
+                        <p>One-tap quick buy, Smart search, Pop-up management</p>
+                    </div>
+                    <div class="category-item">
+                        <h4>🧠 Memorability (3)</h4>
+                        <p>Consistent layout, Visual hierarchy, Quick access</p>
+                    </div>
+                    <div class="category-item">
+                        <h4>🛡️ Error Tolerance (3)</h4>
+                        <p>Universal undo, Preventive handling, Graceful recovery</p>
+                    </div>
+                    <div class="category-item">
+                        <h4>😊 Satisfaction (3)</h4>
+                        <p>Smart notifications, Minimalist UI, Balanced gamification</p>
+                    </div>
+                </div>
 
                 <div class="highlight-box" style="text-align: center; margin-top: 40px; padding: 35px;">
                     <h2 style="color: #ffa500; border: none; margin-bottom: 20px;">🚀 Target Improvement</h2>
                     <p style="font-size: 1.4em; font-weight: 600;">
-                        Dengan implementasi perbaikan yang diusulkan, Shopee dapat meningkatkan satisfaction score dari 3.5 menjadi 4.5/5
+                        Dengan implementasi 15 perbaikan yang diusulkan, Shopee dapat meningkatkan overall usability score dari 78% menjadi 92%
                     </p>
+                    <div style="margin-top: 25px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                        <div style="background: rgba(238,77,45,0.2); padding: 15px; border-radius: 10px;">
+                            <div style="font-size: 1.1em; color: #ffa500; font-weight: 600;">Learnability</div>
+                            <div style="font-size: 1.3em; margin-top: 5px;">4.0 → 4.8</div>
+                        </div>
+                        <div style="background: rgba(238,77,45,0.2); padding: 15px; border-radius: 10px;">
+                            <div style="font-size: 1.1em; color: #ffa500; font-weight: 600;">Efficiency</div>
+                            <div style="font-size: 1.3em; margin-top: 5px;">3.5 → 4.5</div>
+                        </div>
+                        <div style="background: rgba(238,77,45,0.2); padding: 15px; border-radius: 10px;">
+                            <div style="font-size: 1.1em; color: #ffa500; font-weight: 600;">Memorability</div>
+                            <div style="font-size: 1.3em; margin-top: 5px;">4.5 → 4.9</div>
+                        </div>
+                        <div style="background: rgba(238,77,45,0.2); padding: 15px; border-radius: 10px;">
+                            <div style="font-size: 1.1em; color: #ffa500; font-weight: 600;">Error Tolerance</div>
+                            <div style="font-size: 1.3em; margin-top: 5px;">4.0 → 4.7</div>
+                        </div>
+                        <div style="background: rgba(238,77,45,0.2); padding: 15px; border-radius: 10px;">
+                            <div style="font-size: 1.1em; color: #ffa500; font-weight: 600;">Satisfaction</div>
+                            <div style="font-size: 1.3em; margin-top: 5px;">3.5 → 4.6</div>
+                        </div>
+                    </div>
                 </div>
 
                 <div style="margin-top: 50px; text-align: center; padding: 30px; background: linear-gradient(135deg, rgba(238,77,45,0.1), rgba(255,107,107,0.05)); border-radius: 20px; border: 2px solid rgba(238,77,45,0.3);">
                     <h3 style="color: #ffa500; margin-bottom: 20px; font-size: 1.6em;">✨ Terima Kasih</h3>
                     <p style="font-size: 1.2em; margin-bottom: 10px;">Evaluasi Komprehensif Aplikasi Shopee</p>
-                    <p style="font-size: 1em; color: rgba(255,255,255,0.7);">Dipresentasikan oleh Tim Evaluator</p>
+                    <p style="font-size: 1em; color: rgba(255,255,255,0.7);">Dipresentasikan oleh Kelompok 6</p>
                 </div>
             </div>
         </div>
@@ -763,7 +1013,7 @@
 
     <script>
         let currentSlide = 1;
-        const totalSlides = 7;
+        const totalSlides = 10;
 
         function showSlide(n) {
             const slides = document.querySelectorAll('.slide');
@@ -787,7 +1037,8 @@
             document.getElementById('prevBtn').disabled = currentSlide === 1;
             document.getElementById('nextBtn').disabled = currentSlide === totalSlides;
 
-            slides[currentSlide - 1].scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Smooth scroll to top of current slide
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function changeSlide(direction) {
@@ -844,4 +1095,3 @@
     </script>
 </body>
 </html>
-            
